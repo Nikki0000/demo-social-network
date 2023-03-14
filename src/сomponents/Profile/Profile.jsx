@@ -11,7 +11,7 @@ const Profile = (props) => {
     <div>
         <h2 className={s.headBlock}>Profile user</h2>
         <div className={s.profileInfoBlock}>
-            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus} />
+            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus} isOwner={props.isOwner} savePhoto={props.savePhoto}/>
         </div>
         <div className={s.profileBlock}>
             <div className={s.myPostsBlock}>
