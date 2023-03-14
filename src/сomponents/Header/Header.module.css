@@ -1,0 +1,40 @@
+.header {
+  background-color: rgb(94, 43, 43);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.header img {
+  max-width: 80px;
+}
+
+.h1 {
+  float: left;
+  font-size: 50px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #060211, #ff0411);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  position: relative;
+  margin-left: 10px;
+}
+
+.img1 {
+  float: left;
+  margin-left: 30%;
+}
+
+.loginBlock {
+  border: 2px solid silver;
+  float: right;
+  margin: 10px 30px;
+  padding: 5px 15px;
+  background-color: #dc6c0b;
+  border-radius: 10px;
+}
+
+.loginBlock a {
+  color: white;
+}

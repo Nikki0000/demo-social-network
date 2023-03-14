@@ -1,0 +1,18 @@
+.descriptionBlock {
+    padding: 30px;
+    padding-top: 100px;
+}
+
+
+.avaBlock {
+    width: 350px;
+    height: 220px;
+    padding: 20px;
+    border-radius: 100px;
+    float: left;
+}
+
+.statusBlock {
+    float: right;
+    padding-right: 50px;
+}
