@@ -36,9 +36,6 @@ class App extends React.Component {
       <div className='app-wrapper'>
         <HeaderContainer />
         <Navbar />
-        <div>
-          This is loading page social network
-        </div>
         <div className='app-wrapper-content'>
           <Routes>
             <Route path='/profile' element={<ProfileContainer/>}>
