@@ -5,7 +5,7 @@ import s from './Header.module.css';
 const Header = (props) => {
     return <header className={s.header}>
       <img className={s.img1} src="https://img.freepik.com/premium-vector/logo-letter-sn_638109-16.jpg"/>
-      <span className={s.h1}>Sociallll network</span>
+      <span className={s.h1}>Social network</span>
       
 
     <div className={s.loginBlock}>
