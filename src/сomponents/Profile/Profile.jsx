@@ -17,10 +17,10 @@ const Profile = (props) => {
             <div className={s.myPostsBlock}>
                 <MyPostsContainer />
             </div>
-            <div className={s.carouselBlock}>
+            {/* <div className={s.carouselBlock}>
                 <h2>Photos</h2>
                 <ParentComponent/>
-            </div>
+            </div> */}
             
         </div>
         

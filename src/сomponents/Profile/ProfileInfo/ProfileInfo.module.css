@@ -1,70 +1,27 @@
-.descriptionBlock {
-    padding: 30px;
-    padding-top: 100px;
+
+
+.statusBlock {
+	display: inline;
+	float: right;
 }
 
 
 .avaBlock {
-    width: 350px;
-    height: 220px;
-    padding: 20px;
-    border-radius: 100px;
+	display: inline;
     float: left;
 }
 
-.statusBlock {
-    float: right;
-    padding-right: 50px;
+
+.photoBlock {
+	display: flex;
+	padding-left: 15%;
+	padding-right: 15%;
+	justify-content: space-between;
+	border: 3px solid gray;
 }
 
-.inputFile {
-	position: relative;
-	display: inline-block;
-}
 
-.inputFile {
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
-	outline: none;
-	text-decoration: none;
-	font-size: 14px;
-	vertical-align: middle;
-	color: rgb(255 255 255);
-	text-align: center;
-	border-radius: 4px;
-	background-color: #419152;
-	line-height: 22px;
-	height: 40px;
-	padding: 10px 20px;
-	box-sizing: border-box;
-	border: none;
-	margin: 0;
-	transition: background-color 0.2s;
-}
-.inputFile input[type=file] {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
-	display: block;
-	width: 0;
-	height: 0;
-}
- 
-/* Focus */
-.inputFile input[type=file]:focus + span {
-	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
- 
-/* Hover/active */
-.input-file:hover span {
-	background-color: #59be6e;
-}
-.input-file:active span {
-	background-color: #2E703A;
-}
- 
-/* Disabled */
-.input-file input[type=file]:disabled + span {
-	background-color: #eee;
+.testBlock {
+	display: flex;
+	flex-direction: column;
 }
