@@ -27,9 +27,8 @@ const AddNewPostForm = (props) => {
 let AddNewPostFormRedux = reduxForm({form: "ProfileAddNewPostForm"})(AddNewPostForm)
 
 const MyPosts = (props) => {
-    console.log("Render");
 
-    let postsElement = props.postsData.map( posts => <Post message={posts.message} count={posts.count} />);
+    let postsElement = props.postsData.map( posts => <Post key={posts.id} message={posts.message} count={posts.count} />);
 
     let newPostElement = React.createRef();
 

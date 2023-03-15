@@ -3,6 +3,11 @@
 .statusBlock {
 	display: inline;
 	float: right;
+	
+}
+
+.userDataBlock {
+	padding-top: 50px;
 }
 
 
@@ -24,4 +29,9 @@
 .testBlock {
 	display: flex;
 	flex-direction: column;
+}
+
+
+.contact {
+	padding-left: 30px;
 }

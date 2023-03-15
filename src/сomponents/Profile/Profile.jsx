@@ -11,7 +11,12 @@ const Profile = (props) => {
     <div>
         <h2 className={s.headBlock}>Profile user</h2>
         <div className={s.profileInfoBlock}>
-            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus} isOwner={props.isOwner} savePhoto={props.savePhoto}/>
+            <ProfileInfo profile={props.profile} 
+                        status={props.status} 
+                        updateStatus={props.updateStatus} 
+                        isOwner={props.isOwner} 
+                        savePhoto={props.savePhoto} 
+                        saveProfile={props.saveProfile}/>
         </div>
         <div className={s.profileBlock}>
             <div className={s.myPostsBlock}>
@@ -21,7 +26,6 @@ const Profile = (props) => {
                 <h2>Photos</h2>
                 <ParentComponent/>
             </div> */}
-            
         </div>
         
     </div>

@@ -1,4 +1,5 @@
 import { act } from "react-dom/test-utils";
+import { stopSubmit } from "redux-form";
 import { profileAPI, usersAPI } from "../api/api";
 
 const ADD_POST = 'ADD-POST';
@@ -52,6 +53,7 @@ const profileReducer = (state = initialState, action) => {
                 profile: {...state.profile, photos: action.photos}
             }
         }
+
         default: 
             return state;
             
@@ -93,6 +95,8 @@ export const savePhotoSuccess = (photos) => {
 }
 
 
+
+
 export const getUserProfile = (userId) => async (dispatch) => {
     let response = await usersAPI.getProfile(userId);
     dispatch(setUserProfile(response.data));
@@ -116,6 +120,27 @@ export const savePhoto = (file) => async (dispatch) => {
     if(response.data.resultCode  === 0){
         dispatch(savePhotoSuccess(response.data.data.photos));
     }   
+}
+
+export const saveProfile = (profile) => async (dispatch, getState) => {
+    const userId = getState().auth.userId;
+    const response = await profileAPI.saveProfile(profile);
+    if(response.data.resultCode  === 0){
+        dispatch(getUserProfile(userId));
+    } else {
+        let error = response.data.messages[0];
+        let errorObj = {'_error': error};
+        let match =  error.match(/Invalid url format \(Contacts->(.+)\)/);
+        if (match) {
+            let fieldName = match[1].toLowerCase()
+            errorObj = { 'contacts': {}}
+            errorObj.contacts[fieldName] = error
+        }
+        //dispatch(stopSubmit("edit-profile", {_error: response.data.messages[0]}));
+        //return Promise.reject(response.data.messages[0]);
+        dispatch(stopSubmit("edit-profile", errorObj))  
+        throw error;
+    }
 }
 
 export default profileReducer;
