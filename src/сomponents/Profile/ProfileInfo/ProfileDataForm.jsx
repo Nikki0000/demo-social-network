@@ -33,6 +33,7 @@ const ProfieleDataForm = ({handleSubmit, profile, error}) => {
             }) } 
         </div>
         
+        
         </form>
     )
 }

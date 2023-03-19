@@ -7,46 +7,22 @@ const Navbar = () => {
     return (
         <nav className={s.nav}>
             <div>
-                <ul>
-                    <li>
-                        <NavLink to="/profile" className={ navData => navData.isActive ? s.active: s.item}>Profile</NavLink>
-                    </li>
-                </ul>
+                <NavLink to="/profile" className={ navData => navData.isActive ? s.active: s.item}>Profile</NavLink>
             </div>
             <div>
-                <ul>
-                    <li>
-                        <NavLink to="/dialogs" className={ navData => navData.isActive ? s.active: s.item}>Message</NavLink>
-                    </li>
-                </ul>
+                <NavLink to="/dialogs" className={ navData => navData.isActive ? s.active: s.item}>Message</NavLink>
             </div>
             <div>
-                <ul>
-                    <li>
-                        <NavLink to="/news" className={ navData => navData.isActive ? s.active: s.item}>News</NavLink>
-                    </li>
-                </ul>
+                <NavLink to="/news" className={ navData => navData.isActive ? s.active: s.item}>News</NavLink>
             </div>
             <div>
-                <ul>
-                    <li>
-                        <NavLink to="/users" className={ navData => navData.isActive ? s.active: s.item}>Users</NavLink>
-                    </li>
-                </ul>
+                <NavLink to="/users" className={ navData => navData.isActive ? s.active: s.item}>Users</NavLink>
             </div>
             <div className={s.item}>
-                <ul>
-                    <li>
-                        <a>Music</a>
-                    </li>
-                </ul>
+                <a>Music</a>
             </div>
             <div className={s.item}>
-                <ul>
-                    <li>
-                        <a>Setting</a>
-                    </li>
-                </ul>
+                <a>Setting</a>
             </div>
         </nav>
     )
