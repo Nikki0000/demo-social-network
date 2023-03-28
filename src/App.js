@@ -46,7 +46,9 @@ class App extends React.Component {
             <Route path='/news' element={<News/>} />
             <Route path='/users' element={ <UsersContainer /> } />
             <Route path='/login' element={ <LoginPage/> } />
-            <Route path='/sectionbook' element={ <BookSection/> } />
+            <Route path='/sectionbook' element={ <BookSection/> } >
+              <Route path=':id' element={<BookSection/>}/>
+            </Route>
           </Routes>
         </div>
       </div>
