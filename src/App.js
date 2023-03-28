@@ -16,6 +16,7 @@ import {getAuthUserData} from "../src/redux/auth-reducer"
 import { compose } from 'redux';
 import {initializeApp} from "../src/redux/app-reducer"
 import Preloader from './сomponents/common/preloader/Preloader';
+import BookSection from './сomponents/Book section/BookSection';
 
 
 
@@ -45,6 +46,7 @@ class App extends React.Component {
             <Route path='/news' element={<News/>} />
             <Route path='/users' element={ <UsersContainer /> } />
             <Route path='/login' element={ <LoginPage/> } />
+            <Route path='/sectionbook' element={ <BookSection/> } />
           </Routes>
         </div>
       </div>

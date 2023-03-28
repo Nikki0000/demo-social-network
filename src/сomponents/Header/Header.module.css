@@ -3,22 +3,25 @@
   position: fixed;
   width: 80%;
   z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .header img {
   max-width: 80px;
+  border-radius: 50%;
 }
 
 .h1 {
   float: left;
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 600;
   background-image: linear-gradient(to left, #060211, #ff0411);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   position: relative;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .img1 {
@@ -37,4 +40,50 @@
 
 .loginBlock a {
   color: white;
+}
+
+
+
+@media (max-width: 1225px) {
+  .img1 {
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 1066px) {
+  .img1 {
+    margin-left: 20%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .img1 {
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 938px) {
+  .img1 {
+    margin-left: 10%;
+  }
+  .header img {
+    max-width: 70px;
+    border-radius: 50%;
+  }
+  .h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 780px) {
+  .img1 {
+    margin-left: 5%;
+  }
+  .header img {
+    max-width: 50px;
+    border-radius: 50%;
+  }
+  .h1 {
+    font-size: 30px;
+  }
 }

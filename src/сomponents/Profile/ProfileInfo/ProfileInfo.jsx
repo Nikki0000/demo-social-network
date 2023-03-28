@@ -33,6 +33,9 @@ const ProfileInfo = ({updateStatus, profile, status, isOwner, savePhoto, savePro
 
     return (
     <div>
+        <div className={s.headBlock}>
+            Profile user
+        </div>
         <div className={s.photoBlock}>
             <div className={s.testBlock}>
                 <div className={s.avaBlock}>

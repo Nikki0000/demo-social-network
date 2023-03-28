@@ -9,7 +9,6 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 const Profile = (props) => {
     return (
     <div>
-        <h2 className={s.headBlock}>Profile user</h2>
         <div className={s.profileInfoBlock}>
             <ProfileInfo profile={props.profile} 
                         status={props.status} 
