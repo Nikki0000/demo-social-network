@@ -42,7 +42,8 @@ const ProfileInfo = ({updateStatus, profile, status, isOwner, savePhoto, savePro
                     <img src={profile.photos.large || userPhoto}/>
                 </div>
                 <div className={s.inputFile}>
-                    {isOwner && <input type={"file"} onChange={onMainPhotoSelected} />}
+                    {isOwner && <input type={"file"} name={"file"} onChange={onMainPhotoSelected} />}
+                    {/* <span>Загрузить фотографию</span> */}
                 </div>
             </div>
             <div className={s.infoBlock}>

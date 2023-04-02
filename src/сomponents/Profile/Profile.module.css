@@ -1,4 +1,6 @@
-
+.profileInfoBlock {
+  
+}
 
 .myPostsBlock {
   display: inline-block;
@@ -7,7 +9,7 @@
 }
 
 .headBlock {
-    background: #e06a26;
+    background: #ddc2b6;
   padding: 50px 20px;
   text-align: center;
   font-family: 'Merriweather', serif;

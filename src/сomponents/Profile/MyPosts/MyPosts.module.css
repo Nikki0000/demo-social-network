@@ -4,4 +4,9 @@
 
 .posts {
     margin-top: 10px;
+    
+}
+
+.postElement {
+    padding: 30px;
 }

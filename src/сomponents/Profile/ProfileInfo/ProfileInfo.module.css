@@ -2,9 +2,10 @@
   font-family: 'Merriweather', serif;
   font-size: 50px;
   font-weight: normal;
-  padding: 0;
+  padding: 20px 250px 60px 0px;
   margin: 0;
   line-height: 1;
+  text-align: center;
 }
 
 
@@ -22,8 +23,8 @@
 
 
 .avaBlock {
-	display: inline;
-    float: left;
+	/* display: inline;
+    float: left; */
 }
 
 
@@ -32,7 +33,7 @@
 	padding-left: 15%;
 	padding-right: 15%;
 	justify-content: space-between;
-	border: 3px solid gray;
+	/* border: 3px solid gray; */
 }
 
 
@@ -45,3 +46,39 @@
 .contact {
 	padding-left: 30px;
 }
+
+.inputFile {
+	content: 'Select some files';
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 14px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 4px;
+	background-color: #222523;
+	line-height: 22px;
+	height: 40px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+}
+
+
+/* .inputFile input[type=file] {
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+} */
+ 
+.inputFile::-webkit-file-upload-button {
+	visibility: hidden;
+  }

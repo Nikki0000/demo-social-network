@@ -3,7 +3,7 @@ import './App.css';
 import Header from './сomponents/Header/Header';
 import Navbar from './сomponents/Navbar/Navbar';
 import News from './сomponents/News/News';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import React from 'react';
 import store, { updateNewPostText } from './redux/store';
 import DialogsContainer from './сomponents/Dialogs/DialogsContainer';
@@ -22,8 +22,13 @@ import BookSection from './сomponents/Book section/BookSection';
 
 class App extends React.Component {
 
+  // catchAllUnhandledErrors = () => {
+
+  // }
+
   componentDidMount() {
     this.props.initializeApp();
+    // window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
   }
 
   render() {
@@ -39,6 +44,7 @@ class App extends React.Component {
         <Navbar />
         <div className='app-wrapper-content'>
           <Routes>
+            <Route path='/' element={<Navigate to="/profile" />} />
             <Route path='/profile' element={<ProfileContainer/>}>
               <Route path=':userId' element={<ProfileContainer />} />
             </Route>
@@ -49,6 +55,7 @@ class App extends React.Component {
             <Route path='/sectionbook' element={ <BookSection/> } >
               <Route path=':id' element={<BookSection/>}/>
             </Route>
+            <Route path='*' element={<div>404 NOT FOUND</div>}/>
           </Routes>
         </div>
       </div>
