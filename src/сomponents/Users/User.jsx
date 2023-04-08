@@ -10,7 +10,7 @@ let User = ({user, followingInProgress, unfollow, follow}) => {
 
 
     return (
-        <div>
+        <div className={styles.userBlock}>
             <span>
                 <div>
                     <NavLink to={'/profile/' + user.id}>
@@ -35,16 +35,7 @@ let User = ({user, followingInProgress, unfollow, follow}) => {
                         {user.name}
                     </div>
                     <div>
-                        {user.status}
-                    </div>
-                </span>
-                <span>
-                    <div>
-                        {"u.location.country"}
-                        
-                    </div>
-                    <div>
-                        {"u.location.city"}
+                        {user.id}
                     </div>
                 </span>
             </span>

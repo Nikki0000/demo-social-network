@@ -7,9 +7,6 @@ const HeaderBookSection = ({search, searchBook, searchBookEnter, setSearch}) => 
     return (
         <>
             <div className={s.header}>
-                    {/* <h1 className={s.headertext}>
-                        A book is a great thing as long as one knows how to use it.
-                    </h1> */}
                     <div className={s.search}>
                         <p>Find your book:</p>
                         <input type="text" placeholder="Enter your book name"

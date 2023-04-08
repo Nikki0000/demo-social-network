@@ -9,12 +9,14 @@ import { usersAPI } from "../../api/api";
 import { withAuthRedirect } from "../../api/hoc/withAuthRedirect";
 import { compose } from "redux";
 import { getCurrentPageSelector, getFollowingInProgressSelector, getIsFetchingSelector, getPageSizeSelector, getTotalUsersCountSelector, getUsersSelector } from "../../redux/users-selectors";
+import { getStatus } from "../../redux/profile-reducer"; 
 
 
 
 
 
 class UsersContainer extends React.Component {
+
 
     componentDidMount() {
         this.props.getUsers(this.props.currentPage, this.props.pageSize);
@@ -26,6 +28,7 @@ class UsersContainer extends React.Component {
     }
 
     render() {
+
         return <>
             {this.props.isFetching ? <Preloader/> : null}
             <Users totalUsersCount={this.props.totalUsersCount} 
@@ -54,7 +57,10 @@ class UsersContainer extends React.Component {
 // }
 
 
+
+
 let mapStateToProps = (state) => {
+ 
     return {
         users: getUsersSelector(state),
         pageSize: getPageSizeSelector(state),

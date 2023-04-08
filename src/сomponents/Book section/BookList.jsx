@@ -4,6 +4,11 @@ import s from './BookSection.module.css'
 
 const BookList = ({book}) => {
 
+    
+
+
+
+
     const navigate = useNavigate();
     //console.log(book);
 

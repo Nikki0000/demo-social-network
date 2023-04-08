@@ -9,7 +9,6 @@ import styles from './users.module.css';
 
 let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged, users, ...props}) => {
 
-
     return <div>
     <Paginator currentPage={currentPage} onPageChanged={onPageChanged} totalItemsCount={totalUsersCount} pageSize={pageSize}/>
     <div>
